@@ -23,4 +23,5 @@ export class RolesService {
     const roles = await this.roleRepository.findAll();
     return roles;
   }
+
 }

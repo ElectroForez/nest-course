@@ -41,6 +41,7 @@ export class AuthService {
     if (!user) {
       throw new UnauthorizedException({'message':'Неверный email или пароль'});
     }
+
     const passwordEquals = bcrypt.compare(userDto.password, user.password);
     if (user && passwordEquals) {
       return user;
